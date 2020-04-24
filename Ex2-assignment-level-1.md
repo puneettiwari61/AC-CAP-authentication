@@ -4,10 +4,10 @@
 
 In this topic, you have to build a small web API from scratch for the following user stories.
 
-*Note - This is not fullstack application, you only have to build the API using Node.js, Express.js and MongoDB. Please follow standard web practices.*
+_Note - This is not fullstack application, you only have to build the API using Node.js, Express.js and MongoDB. Please follow standard web practices._
 
 ```
-1. There are two kinds of users in our system 
+1. There are two kinds of users in our system
   - students
   - mentors
 2. A student should be able to signup using following information.
@@ -26,3 +26,38 @@ In this topic, you have to build a small web API from scratch for the following 
 ## BLOCK-writeTextAnswer
 
 Here write the psuedo code you would follow to build the above API.
+
+1. Models
+
+- students
+- mentors
+- todo
+
+2. Schema for students will include
+   Name - String
+   Email Id - String
+   Password - String
+   BatchNumber - Number
+
+3. Request body for students Login route
+   `{ email: "puneet@gmail.com", password: "puneet" }`
+
+4. Schema for mentors
+   Name - String
+   Email Id - String
+   Password - String
+
+   - Have to seed 3 mentors into database
+
+5. Request body for mentors Login route
+   `{ email: "puneet@gmail.com", password: "puneet" }`
+
+6. keep identification route same for both mentors and students.
+
+7. Schema for todo
+   Name of todo - String
+   Completed - Boolean (default: false)
+
+8. A mentor can see and add task in todo.
+
+9. A student can see task but can't add.
